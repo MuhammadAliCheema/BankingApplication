@@ -6,17 +6,36 @@ function CreateAccount() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
   const { addUser } = useContext(UserContext);
+
+  const validateForm = () => {
+    const errors = {};
+    if (!name) {
+      errors.name = 'Name cannot be blank.';
+    }
+    if (!email) {
+      errors.email = 'Email cannot be blank.';
+    }
+    if (password.length < 8) {
+      errors.password = 'Password must be at least 8 characters long.';
+    }
+    return errors;
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (name && email && password.length >= 8) {
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
       const success = addUser({ name, email, password, balance: 0 });
       if (success) {
         setMessage('Account created successfully!');
         setName('');
         setEmail('');
         setPassword('');
+        setErrors({});
       } else {
         setMessage('An account with this email already exists.');
       }
@@ -34,17 +53,20 @@ function CreateAccount() {
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
-                  <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+                  <input type="text" className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+                  {errors.name && <div className="alert alert-danger mt-2">{errors.name}</div>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">Email address</label>
-                  <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                  <input type="email" className="form-control" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  {errors.email && <div className="alert alert-danger mt-2">{errors.email}</div>}
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
-                  <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength="8" />
+                  <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                  {errors.password && <div className="alert alert-danger mt-2">{errors.password}</div>}
                 </div>
-                <button type="submit" className="btn btn-primary btn-block" disabled={!name || !email || password.length < 8}>Create Account</button>
+                <button type="submit" className="btn btn-primary btn-block">Create Account</button>
               </form>
             </div>
           </div>
