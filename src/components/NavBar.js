@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function NavBar() {
   const location = useLocation();
 
-  useEffect(() => {
-    // Initialize Bootstrap tooltips
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new window.bootstrap.Tooltip(tooltipTriggerEl)
-    });
-  }, []);
-
   const navItems = [
-    { name: 'Home', path: '/', description: 'Go to the homepage' },
-    { name: 'Create Account', path: '/create-account', description: 'Create a new account' },
-    { name: 'Deposit', path: '/deposit', description: 'Deposit money into your account' },
-    { name: 'Withdraw', path: '/withdraw', description: 'Withdraw money from your account' },
-    { name: 'All Data', path: '/all-data', description: 'View all account data' },
-    { name: 'Login', path: '/login', description: 'Login to your account' }
+    { name: 'Home', path: '/' },
+    { name: 'Create Account', path: '/create-account' },
+    { name: 'Deposit', path: '/deposit' },
+    { name: 'Withdraw', path: '/withdraw' },
+    { name: 'All Data', path: '/all-data' },
+    { name: 'Login', path: '/login' }
   ];
 
   return (
@@ -33,13 +23,7 @@ function NavBar() {
         <ul className="navbar-nav ml-auto">
           {navItems.map(item => (
             <li className={`nav-item ${location.pathname === item.path ? 'active' : ''}`} key={item.name}>
-              <Link
-                className="nav-link"
-                to={item.path}
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title={item.description}
-              >
+              <Link className="nav-link" to={item.path}>
                 {item.name}
               </Link>
             </li>
