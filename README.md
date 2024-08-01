@@ -1,6 +1,9 @@
-# This is Bad Bank Assignment for MIT MERN Stack Course
+# This is Bad Bank Assignment for MIT MERN Stack Course (Front End Only)
 # # The aws s3 bucket link to the banking app is:
 [link](http://muhammad-cheema-bankingapplication.s3-website.ca-central-1.amazonaws.com/_
+
+# The screenshot of web application homepage is provide below:
+![image](https://github.com/user-attachments/assets/90608b49-0eb6-4b04-90d2-f11b5657a50d)
 
 # Your website should include the following functionality. Please review the rubric below for specific information on how each element will be graded. 
 
