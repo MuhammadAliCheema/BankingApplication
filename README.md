@@ -1,75 +1,45 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Bad Bank of America
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Bad Bank of America app demonstrates basic front-end React functionality, including:
+* Navigate among different pages using react-router-dom
+* Create Account
+* Login and logout
+* Add and remove money from an account
+* Display account transactions
+* Display user data
+* Toggle between languages
+* Toggle among different form libraries
 
-## Available Scripts
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and completed as part of MIT xPro's MERN stack certificate program.
 
-### `npm start`
+## Installation
+* Fork repository 
+* Clone locally
+* Install dependencies using ```npm install``` or ```yarn install```
+* Start development server using ```npm start``` or ```yarn start```
+* Run test suite using ```npm run test``` or ```yarn test```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Used
+This project uses React, Express, and MongoDB.
 
-### `npm test`
+## Screenshots
+![screenshot](https://github.com/jayeclark/banking/blob/main/BankBank.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
+A full specification of functionality can be found in the [Requirements](https://jayeclark.github.io/banking/docs/requirements.md) doc. 
 
-### `npm run build`
+## License
+This project is licensed under the [MIT](https://github.com/jayeclark/banking/blob/main/LICENSE) license.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deploy on GitHub Pages
+In order to deploy, you must have node installed. Get it [here](https://nodejs.org/). Recommended: use yarn instead of npm for package management. Get yarn [here](https://getyarn.io/).
+* Clone repository locally using ```git clone https://github.com/jayeclark/banking```
+* Sync with your personal GitHub
+* Install dependencies using ```npm install``` or ```yarn install```
+* In package.json, update homepage to reflect your homepage and the desired directory where you would like the banking app to appear
+* Run ```yarn deploy``` or ```npm deploy```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# BankingApplication
-Front End Banking Application Assignment Submission
->>>>>>> aa51da694eab171fa793411277327b771a6d4ba1
+## Contributing
+Contributions to open issues are welcomed. Please sign off on your commits and ensure that any feature enhancements are accompanied by the appropriate tests.
